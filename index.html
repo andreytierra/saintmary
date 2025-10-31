@@ -1,28 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carreras de Computación en Costa Rica</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carreras en Computación – Costa Rica y Más Allá</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2em; background: #f4f4f4; color: #222; }
-    h1 { text-align: center; color: #005f73; }
-    ul { list-style: none; padding: 0; }
-    li { background: #fff; margin: 1em 0; padding: 1em; border-radius: 10px; }
-    a { color: #0a9396; font-weight: bold; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    :root {
+      --primary: #005f73;
+      --accent: #0a9396;
+      --light: #f4f4f4;
+      --text: #222;
+    }
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #d0f0f2;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    .card p {
+      margin: 0.5rem 0 1rem;
+    }
+    .card a {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      background: #007d82;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <h1>🌎 Carreras de Computación en Costa Rica</h1>
-  <p style="text-align:center;">Recopilación de universidades con programas en computación, software e IA rumbo al 2030.</p>
-  <ul>
-    <li><a href="https://www.ecci.ucr.ac.cr/oferta-acad%C3%A9mica/bachillerato-en-computaci%C3%B3n-con-varios-%C3%A9nfasis-0">Universidad de Costa Rica (UCR)</a> — Bachillerato en Computación</li>
-    <li><a href="https://www.tec.ac.cr/ingenieria-computacion">Tecnológico de Costa Rica (TEC)</a> — Ingeniería en Computación</li>
-    <li><a href="https://ufidelitas.ac.cr/carreras/ciencias-de-la-computacion/">Universidad Fidélitas</a> — Ciencias de la Computación</li>
-    <li><a href="https://www.carreras.una.ac.cr/ingenieria-en-sistemas-de-informacion/">Universidad Nacional (UNA)</a> — Ingeniería en Sistemas</li>
-    <li><a href="https://www.utn.ac.cr/content/ingenieria-software-tecnologias-informaticas">Universidad Técnica Nacional (UTN)</a> — Ingeniería de Software</li>
-  </ul>
-  <p style="text-align:center; margin-top:2em; font-size:0.9em;">© 2025 — Compilado educativo para estudiantes de Costa Rica.</p>
+  <header>
+    <h1>🌍 Carreras en Computación rumbo al 2030</h1>
+    <p>Universidades en Costa Rica y opciones internacionales 100 % online</p>
+  </header>
+
+  <main>
+    <!-- TEC -->
+    <div class="card">
+      <h2>Tecnológico de Costa Rica (TEC)</h2>
+      <p><strong>Carrera:</strong> Ingeniería en Computación</p>
+      <p>Enfocada en desarrollo de software, inteligencia artificial y sistemas embebidos. Reconocida por su alto nivel técnico.</p>
+      <a href="https://www.tec.ac.cr/ingenieria-computacion" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- UCR -->
+    <div class="card">
+      <h2>Universidad de Costa Rica (UCR)</h2>
+      <p><strong>Carrera:</strong> Bachillerato en Computación con Énfasis</p>
+      <p>Formación científica y analítica en programación, algoritmos y tecnologías emergentes.</p>
+      <a href="https://www.ecci.ucr.ac.cr/oferta-acad%C3%A9mica/bachillerato-en-computaci%C3%B3n-con-varios-%C3%A9nfasis-0" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- UNA -->
+    <div class="card">
+      <h2>Universidad Nacional (UNA)</h2>
+      <p><strong>Carrera:</strong> Ingeniería en Sistemas de Información</p>
+      <p>Combina informática y gestión empresarial, con énfasis en innovación tecnológica y ética profesional.</p>
+      <a href="https://www.carreras.una.ac.cr/ingenieria-en-sistemas-de-informacion/" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- Universidad Latina -->
+    <div class="card">
+      <h2>Universidad Latina de Costa Rica</h2>
+      <p><strong>Carrera:</strong> Ingeniería en Sistemas Computacionales</p>
+      <p>Desarrollo de software, redes, ciberseguridad y aplicaciones móviles. Programas con enfoque práctico.</p>
+      <a href="https://ulatina.ac.cr/ingenieria-en-sistemas-computacionales" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- Fidélitas -->
+    <div class="card">
+      <h2>Universidad Fidélitas</h2>
+      <p><strong>Carrera:</strong> Ciencias de la Computación e Informática</p>
+      <p>Enseñanza actualizada con metodologías ágiles, IA y análisis de datos. Laboratorios modernos y enfoque empresarial.</p>
+      <a href="https://ufidelitas.ac.cr/carreras/ciencias-de-la-computacion/" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- ULACIT -->
+    <div class="card">
+      <h2>Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)</h2>
+      <p><strong>Carrera:</strong> Ingeniería Informática</p>
+      <p>Enfoque en innovación, proyectos reales y desarrollo de software basado en resolución de problemas.</p>
+      <a href="https://www.ulacit.ac.cr/carreras/ingenieria-informatica" target="_blank">Explorar carrera</a>
+    </div>
+
+    <!-- International Option -->
+    <div class="card">
+      <h2>University of London (Reino Unido)</h2>
+      <p><strong>Programa 100 % Online:</strong> Bachelor of Science in Computer Science</p>
+      <p>Programa internacional impartido junto a Goldsmiths y Coursera. Se puede cursar totalmente desde Costa Rica.</p>
+      <a href="https://www.coursera.org/degrees/bachelor-of-science-computer-science-london" target="_blank">Explorar carrera</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 — Compilado educativo para estudiantes de Costa Rica. Diseñado por <strong>andrey@alvarado506.com</strong>
+  </footer>
 </body>
 </html>
