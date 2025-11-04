@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carreras en Computación – Costa Rica y Más Allá</title>
+  <title>Saint Mary – Carreras en Computación 2030</title>
   <style>
     :root {
-      --primary: #005f73;
-      --accent: #0a9396;
-      --light: #f4f4f4;
-      --text: #222;
+      --primary: #146c43;   /* verde principal */
+      --accent: #1e8558;    /* verde secundario */
+      --highlight: #ffcc33; /* amarillo dorado */
+      --light: #f9f9f4;
+      --text: #1a1a1a;
     }
     body {
       font-family: "Inter", Arial, sans-serif;
@@ -22,16 +23,21 @@
       background: var(--primary);
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
+    }
+    header img {
+      height: 90px;
+      margin-bottom: 0.5rem;
     }
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
+      font-weight: 700;
     }
     header p {
       margin-top: 0.5rem;
       font-size: 1rem;
-      color: #d0f0f2;
+      color: #e6ffe8;
     }
     main {
       display: grid;
@@ -47,6 +53,7 @@
       padding: 1.5rem;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
+      border-top: 6px solid var(--highlight);
     }
     .card:hover {
       transform: translateY(-4px);
@@ -58,17 +65,31 @@
     .card p {
       margin: 0.5rem 0 1rem;
     }
-    .card a {
+
+    /* Botones principales */
+    .card a.button {
       background: var(--accent);
-      color: #fff;
+      color: #fff !important;
       padding: 0.6rem 1.2rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
-    .card a:hover {
-      background: #007d82;
+    .card a.button:hover {
+      background: var(--primary);
     }
+
+    /* Enlaces informativos */
+    .card a:not(.button) {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:not(.button):hover {
+      text-decoration: underline;
+    }
+
     ul {
       padding-left: 1.2rem;
     }
@@ -76,93 +97,81 @@
       margin-bottom: 0.5rem;
       line-height: 1.5;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #444;
+      background: #fffbe5;
+      border-top: 3px solid var(--highlight);
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://saintmary.ed.cr/wp-content/uploads/2021/12/logo-header.svg" alt="Saint Mary School Logo">
     <h1>🌍 Carreras en Computación rumbo al 2030</h1>
-    <p>Universidades en Costa Rica, opciones internacionales y recursos gratuitos en línea</p>
+    <p>Universidades, recursos y habilidades para los creadores del futuro</p>
   </header>
 
   <main>
-    <!-- TEC -->
+    <!-- Universidades -->
     <div class="card">
       <h2>Tecnológico de Costa Rica (TEC)</h2>
       <p><strong>Carrera:</strong> Ingeniería en Computación</p>
       <p>Enfocada en desarrollo de software, inteligencia artificial y sistemas embebidos. Reconocida por su alto nivel técnico.</p>
-      <a href="https://www.tec.ac.cr/ingenieria-computacion" target="_blank">Explorar carrera</a>
+      <a href="https://www.tec.ac.cr/ingenieria-computacion" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- UCR -->
     <div class="card">
       <h2>Universidad de Costa Rica (UCR)</h2>
       <p><strong>Carrera:</strong> Bachillerato en Computación con Énfasis</p>
       <p>Formación científica y analítica en programación, algoritmos y tecnologías emergentes.</p>
-      <a href="https://www.ecci.ucr.ac.cr/oferta-acad%C3%A9mica/bachillerato-en-computaci%C3%B3n-con-varios-%C3%A9nfasis-0" target="_blank">Explorar carrera</a>
+      <a href="https://www.ecci.ucr.ac.cr/oferta-acad%C3%A9mica/bachillerato-en-computaci%C3%B3n-con-varios-%C3%A9nfasis-0" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- UNA -->
     <div class="card">
       <h2>Universidad Nacional (UNA)</h2>
       <p><strong>Carrera:</strong> Ingeniería en Sistemas de Información</p>
       <p>Combina informática y gestión empresarial, con énfasis en innovación tecnológica y ética profesional.</p>
-      <a href="https://www.carreras.una.ac.cr/ingenieria-en-sistemas-de-informacion/" target="_blank">Explorar carrera</a>
+      <a href="https://www.carreras.una.ac.cr/ingenieria-en-sistemas-de-informacion/" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- CENFOTEC -->
     <div class="card">
       <h2>Universidad CENFOTEC</h2>
       <p><strong>Carrera:</strong> Bachillerato en Ingeniería del Software</p>
-      <p>Formación especializada en desarrollo de software, IA, ciberseguridad, blockchain e infraestructura tecnológica. Modalidad virtual en vivo.</p>
-      <a href="https://ucenfotec.ac.cr/Carreras/bachillerato-en-ingenieria-del-software/" target="_blank">Explorar carrera</a>
+      <p>Formación especializada en desarrollo de software, IA, ciberseguridad, blockchain e infraestructura tecnológica.</p>
+      <a href="https://ucenfotec.ac.cr/Carreras/bachillerato-en-ingenieria-del-software/" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- Universidad Latina -->
     <div class="card">
       <h2>Universidad Latina de Costa Rica</h2>
       <p><strong>Carrera:</strong> Ingeniería en Sistemas Computacionales</p>
       <p>Desarrollo de software, redes, ciberseguridad y aplicaciones móviles. Programas con enfoque práctico.</p>
-      <a href="https://ulatina.ac.cr/ingenieria-en-sistemas-computacionales" target="_blank">Explorar carrera</a>
+      <a href="https://ulatina.ac.cr/ingenieria-en-sistemas-computacionales" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- Fidélitas -->
     <div class="card">
       <h2>Universidad Fidélitas</h2>
       <p><strong>Carrera:</strong> Ciencias de la Computación e Informática</p>
       <p>Enseñanza actualizada con metodologías ágiles, IA y análisis de datos. Laboratorios modernos y enfoque empresarial.</p>
-      <a href="https://ufidelitas.ac.cr/carreras/ciencias-de-la-computacion/" target="_blank">Explorar carrera</a>
+      <a href="https://ufidelitas.ac.cr/carreras/ciencias-de-la-computacion/" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- ULACIT -->
-    <div class="card">
-      <h2>Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)</h2>
-      <p><strong>Carrera:</strong> Ingeniería Informática</p>
-      <p>Enfoque en innovación, proyectos reales y desarrollo de software basado en resolución de problemas.</p>
-      <a href="https://www.ulacit.ac.cr/carreras/ingenieria-informatica" target="_blank">Explorar carrera</a>
-    </div>
-
-    <!-- University of London -->
     <div class="card">
       <h2>University of London (Reino Unido)</h2>
       <p><strong>Programa 100 % Online:</strong> Bachelor of Science in Computer Science</p>
       <p>Programa internacional impartido junto a Goldsmiths y Coursera. Se puede cursar totalmente desde Costa Rica.</p>
-      <a href="https://www.coursera.org/degrees/bachelor-of-science-computer-science-london" target="_blank">Explorar carrera</a>
+      <a href="https://www.coursera.org/degrees/bachelor-of-science-computer-science-london" target="_blank" class="button">Explorar carrera</a>
     </div>
 
-    <!-- Aberystwyth University -->
     <div class="card">
       <h2>Aberystwyth University (Reino Unido)</h2>
       <p><strong>Programas destacados:</strong></p>
       <ul>
         <li><a href="https://courses.aber.ac.uk/undergraduate/computer-science-degree" target="_blank">BSc Computer Science</a></li>
         <li><a href="https://www.aber.ac.uk/en/study-with-us/subjects/computer-science/" target="_blank">BSc Artificial Intelligence and Robotics</a></li>
-        <li><a href="https://www.aber.ac.uk/en/study-with-us/subjects/computer-science/" target="_blank">BSc Computer Graphics, Vision and Games</a></li>
         <li><a href="https://courses.aber.ac.uk/undergraduate/computer-science-and-mathematics-degree" target="_blank">BSc Computer Science and Mathematics</a></li>
         <li><a href="https://www.aber.ac.uk/en/cs/study-with-us/ug/" target="_blank">BSc Web Development and Security</a></li>
       </ul>
@@ -172,61 +181,35 @@
     <div class="card">
       <h2>CS50 – Introducción a la Ciencia de la Computación (Harvard)</h2>
       <p><strong>Tipo:</strong> Curso gratuito en línea (YouTube, en inglés con subtítulos)</p>
-      <p>Curso introductorio famoso de Harvard que enseña cómo piensa un programador: lógica, algoritmos, resolución de problemas y fundamentos de computación. Ideal para empezar, incluso desde el colegio.</p>
-      <a href="https://www.youtube.com/watch?v=h6lqxDwUmJQ&list=PLhQjrBD2T383q7Vn8QnTsVgSvyLpsqL_R&index=1" target="_blank">Ver CS50 en YouTube</a>
+      <p>Curso introductorio famoso de Harvard que enseña cómo piensa un programador: lógica, algoritmos y resolución de problemas.</p>
+      <a href="https://www.youtube.com/watch?v=h6lqxDwUmJQ&list=PLhQjrBD2T383q7Vn8QnTsVgSvyLpsqL_R&index=1" target="_blank" class="button">Ver CS50 en YouTube</a>
     </div>
 
-    <!-- Recursos adicionales -->
+    <!-- Recursos -->
     <div class="card">
       <h2>Recursos gratuitos para aprender por tu cuenta 🧠</h2>
-      <p>Estos cursos y plataformas te ayudan a empezar o profundizar en temas de computación, programación, inteligencia artificial y ciencia de datos.</p>
-
       <ul>
-        <li>
-          <strong><a href="https://www.coursera.org/learn/python" target="_blank">Python for Everybody – Universidad de Michigan</a></strong><br />
-          Curso práctico para aprender a programar en Python desde cero. Ideal para jóvenes y principiantes.
-        </li>
-        <li>
-          <strong><a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google Machine Learning Crash Course</a></strong><br />
-          Curso gratuito de Google con ejercicios interactivos para entender los conceptos básicos de la inteligencia artificial y el aprendizaje automático.
-        </li>
-        <li>
-          <strong><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a></strong><br />
-          Mini-cursos gratuitos sobre ciencia de datos, IA, visualización y programación en Python con notebooks interactivos.
-        </li>
+        <li><a href="https://www.coursera.org/learn/python" target="_blank">Python for Everybody – Universidad de Michigan</a><br> Aprende Python desde cero, ideal para jóvenes principiantes.</li>
+        <li><a href="https://developers.google.com/machine-learning/crash-course" target="_blank">Google Machine Learning Crash Course</a><br> Curso gratuito con ejercicios interactivos sobre IA y ML.</li>
+        <li><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a><br> Mini-cursos gratuitos sobre ciencia de datos, IA y programación.</li>
       </ul>
-
-      <p style="margin-top:1rem;"><em>💡 Todos los cursos se pueden hacer desde Costa Rica, sin costo y a tu propio ritmo.</em></p>
+      <p><em>💡 Todos los cursos se pueden hacer desde Costa Rica, sin costo y a tu propio ritmo.</em></p>
     </div>
 
-    <!-- Habilidades del Futuro -->
-    <div class="card" style="background:#fefefe;">
+    <!-- Skills -->
+    <div class="card">
       <h2>🚀 Habilidades del Futuro</h2>
-      <p>Más allá de los títulos, estas habilidades te permitirán destacar en el mundo tecnológico rumbo al 2030:</p>
-
       <ul>
-        <li>
-          <strong>1️⃣ Aprender a adaptarse a cambios drásticos</strong><br />
-          El entorno tecnológico cambia cada seis meses. Quienes triunfan no son los que lo saben todo, sino los que <em>aprenden rápido y sin miedo</em>.
-        </li>
-
-        <li style="margin-top:1rem;">
-          <strong>2️⃣ Ser un “Máster en aprender”</strong><br />
-          Desarrollar pensamiento crítico, curiosidad y la capacidad de aprender de cualquier fuente.
-        </li>
-
-        <li style="margin-top:1rem;">
-          <strong>3️⃣ Pensamiento universal y multidisciplinario</strong><br />
-          Los mejores creadores del futuro serán quienes unan ciencia, arte, tecnología y empatía.
-        </li>
+        <li><strong>1️⃣ Aprender a adaptarse a cambios drásticos:</strong> el entorno tecnológico cambia cada seis meses. Los que triunfan aprenden rápido y sin miedo.</li>
+        <li><strong>2️⃣ Ser un “Máster en aprender”:</strong> pensamiento crítico, curiosidad y la capacidad de aprender de cualquier fuente.</li>
+        <li><strong>3️⃣ Pensamiento universal y multidisciplinario:</strong> unir ciencia, arte, tecnología y empatía es la fórmula del creador del futuro.</li>
       </ul>
-
-      <p style="margin-top:1rem;"><em>💬 La verdadera habilidad no es saberlo todo, sino saber aprender lo que aún no existe.</em></p>
+      <p><em>💬 La verdadera habilidad no es saberlo todo, sino aprender lo que aún no existe.</em></p>
     </div>
   </main>
 
   <footer>
-    © 2025 — Compilado educativo para estudiantes de Costa Rica. Diseñado por <strong>andrey@alvarado506.com</strong>
+    © 2025 — Proyecto educativo Saint Mary School · Diseño adaptado a la paleta institucional
   </footer>
 </body>
 </html>
